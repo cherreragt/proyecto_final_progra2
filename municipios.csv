@@ -1,8 +1,68 @@
 origen,destino,kms
 Ciudad de Guatemala,Mixco,10
-Ciudad de Guatemala,Villa Nueva,20
-Ciudad de Guatemala,Santa Catarina Pinula,15
-Mixco,San Juan Sacatepequez,18
-Villa Nueva,San Miguel Petapa,12
+Ciudad de Guatemala,Villa Nueva,15
+Ciudad de Guatemala,San José Pinula,21
+Ciudad de Guatemala,Santa Catarina Pinula,8
+Ciudad de Guatemala,San Miguel Petapa,20
+Ciudad de Guatemala,Amatitlán,27
+Ciudad de Guatemala,San Juan Sacatepéquez,17
+Ciudad de Guatemala,San Pedro Ayampuc,17
+Ciudad de Guatemala,San José del Golfo,20
+Ciudad de Guatemala,Chinautla,7
+Ciudad de Guatemala,San Raymundo,22
+Ciudad de Guatemala,San Pedro Sacatepéquez,15
+Ciudad de Guatemala,Palencia,17
+Ciudad de Guatemala,Chuarrancho,30
+Ciudad de Guatemala,Fraijanes,25
+Ciudad de Guatemala,Villa Canales,20
+Mixco,Villa Nueva,17
+Mixco,San Juan Sacatepéquez,18
 Mixco,San Pedro Ayampuc,22
-Santa Catarina Pinula,El Tejar,25
+Mixco,San José del Golfo,29
+Mixco,Chinautla,9
+Mixco,San Raymundo,20
+Mixco,San Pedro Sacatepéquez,12
+Mixco,Palencia,28
+Mixco,Chuarrancho,35
+Mixco,Fraijanes,30
+Mixco,Villa Canales,25
+Villa Nueva,San Miguel Petapa,8
+Villa Nueva,Amatitlán,15
+Villa Nueva,San José Pinula,25
+Villa Nueva,Santa Catarina Pinula,20
+Villa Nueva,San Juan Sacatepéquez,30
+Villa Nueva,San Pedro Ayampuc,27
+Villa Nueva,San José del Golfo,35
+Villa Nueva,Chinautla,18
+Villa Nueva,San Raymundo,28
+Villa Nueva,San Pedro Sacatepéquez,20
+Villa Nueva,Palencia,35
+Villa Nueva,Chuarrancho,40
+Villa Nueva,Fraijanes,22
+Villa Nueva,Villa Canales,12
+San Miguel Petapa,Amatitlán,13
+San Miguel Petapa,Fraijanes,15
+San Miguel Petapa,Villa Canales,10
+Amatitlán,Fraijanes,20
+Amatitlán,Villa Canales,12
+Fraijanes,Villa Canales,10
+San José Pinula,Santa Catarina Pinula,7
+San José Pinula,San José del Golfo,15
+San José Pinula,Palencia,20
+San José Pinula,Chuarrancho,25
+Santa Catarina Pinula,San José del Golfo,18
+Santa Catarina Pinula,Palencia,22
+Santa Catarina Pinula,Chuarrancho,28
+San José del Golfo,Palencia,12
+San José del Golfo,Chuarrancho,20
+Palencia,Chuarrancho,15
+San Pedro Ayampuc,San Pedro Sacatepéquez,10
+San Pedro Ayampuc,San Juan Sacatepéquez,12
+San Pedro Ayampuc,San Raymundo,18
+San Pedro Ayampuc,Chinautla,9
+San Pedro Sacatepéquez,San Juan Sacatepéquez,8
+San Pedro Sacatepéquez,San Raymundo,15
+San Pedro Sacatepéquez,Chinautla,10
+San Juan Sacatepéquez,San Raymundo,10
+San Juan Sacatepéquez,Chinautla,12
+San Raymundo,Chinautla,14
