@@ -164,6 +164,7 @@ class App(QWidget):
             recorrido = self.grafo.bfs(inicio)
             self.ver_grafo(recorrido)
             recorrido_texto = ' -> '.join(f'{i+1}. {municipio}' for i, municipio in enumerate(recorrido))
+            self.label.setWordWrap(True)
             self.label.setText(f"Recorrido BFS desde {inicio}: {recorrido_texto}")
         else:
             self.label.setText("Municipio no válido para BFS.")
@@ -174,6 +175,7 @@ class App(QWidget):
             recorrido = self.grafo.dfs(inicio)
             self.ver_grafo(recorrido)
             recorrido_texto = ' -> '.join(f'{i+1}. {municipio}' for i, municipio in enumerate(recorrido))
+            self.label.setWordWrap(True)
             self.label.setText(f"Recorrido DFS desde {inicio}: {recorrido_texto}")
         else:
             self.label.setText("Municipio no válido para DFS.")
