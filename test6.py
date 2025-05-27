@@ -5,6 +5,11 @@ import csv
 import mysql.connector
 from PyQt5.QtWidgets import QApplication, QWidget, QPushButton, QVBoxLayout, QLabel, QLineEdit, QHBoxLayout, QFileDialog
 
+DB_HOST = 'localhost'
+DB_USER = 'user1'
+DB_PASSWORD = 'root1'
+DB_NAME = 'grafo_guatemala'
+
 class GrafoMunicipios:
     def __init__(self):
         self.grafo = {}
@@ -19,7 +24,7 @@ class GrafoMunicipios:
             self.grafo[destino].append((origen, distancia))
 
     def cargar_desde_db(self):
-        conexion = mysql.connector.connect(host='localhost', user='user1', password='root1', database='grafo_guatemala')
+        conexion = mysql.connector.connect(host=DB_HOST, user=DB_USER, password=DB_PASSWORD, database=DB_NAME)
         cursor = conexion.cursor()
         cursor.execute("SELECT origen, destino, distancia FROM grafo_municipios")
         for origen, destino, distancia in cursor.fetchall():
@@ -29,7 +34,7 @@ class GrafoMunicipios:
         conexion.close()
 
     def guardar_en_db(self, origen, destino, distancia):
-        conexion = mysql.connector.connect(host='localhost', user='user1', password='root1', database='grafo_guatemala')
+        conexion = mysql.connector.connect(host=DB_HOST, user=DB_USER, password=DB_PASSWORD, database=DB_NAME)
         cursor = conexion.cursor()
         cursor.execute("INSERT INTO grafo_municipios (origen, destino, distancia) VALUES (%s, %s, %s)",
                        (origen, destino, distancia))
