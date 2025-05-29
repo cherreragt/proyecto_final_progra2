@@ -152,15 +152,19 @@ class App(QWidget):
             for destino, distancia in conexiones:
                 G.add_edge(municipio, destino, weight=distancia)
 
-        pos = nx.spring_layout(G)
-        nx.draw(G, pos, with_labels=True, node_color='lightblue', node_size=3000, font_size=10)
+        #pos = nx.spring_layout(G)
+        pos = nx.spring_layout(G, k=distancia, iterations=50)
+        plt.figure(figsize=(10, 8))
+        nx.draw(G, pos, with_labels=True, node_color='lightblue', node_size=1500, font_size=12,edge_color='gray')
         labels = nx.get_edge_attributes(G, 'weight')
-        nx.draw_networkx_edge_labels(G, pos, edge_labels=labels)
+        nx.draw_networkx_edge_labels(G, pos, edge_labels=labels, font_size=7)
 
         if recorrido:
             path_edges = [(recorrido[i], recorrido[i+1]) for i in range(len(recorrido)-1)]
             nx.draw_networkx_edges(G, pos, edgelist=path_edges, edge_color='red', width=2)
 
+        plt.title(f"Grafo: PROYECTO DE GRAFOS - MUNICIPIOS DE GUATEMALA")
+        plt.tight_layout()
         plt.show()
 
     def mostrar_bfs(self):
