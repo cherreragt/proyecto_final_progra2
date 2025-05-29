@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import sys
 import matplotlib.pyplot as plt
 import networkx as nx
@@ -24,7 +25,7 @@ class GrafoMunicipios:
             self.grafo[destino].append((origen, distancia))
 
     def cargar_desde_db(self):
-        conexion = mysql.connector.connect(host=DB_HOST, user=DB_USER, password=DB_PASSWORD, database=DB_NAME)
+        conexion = mysql.connector.connect(host=DB_HOST, user=DB_USER, password=DB_PASSWORD, database=DB_NAME, charset="utf8mb4")
         cursor = conexion.cursor()
         cursor.execute("SELECT origen, destino, distancia FROM grafo_municipios")
         for origen, destino, distancia in cursor.fetchall():
@@ -34,7 +35,7 @@ class GrafoMunicipios:
         conexion.close()
 
     def guardar_en_db(self, origen, destino, distancia):
-        conexion = mysql.connector.connect(host=DB_HOST, user=DB_USER, password=DB_PASSWORD, database=DB_NAME)
+        conexion = mysql.connector.connect(host=DB_HOST, user=DB_USER, password=DB_PASSWORD, database=DB_NAME, charset="utf8mb4")
         cursor = conexion.cursor()
         cursor.execute("INSERT INTO grafo_municipios (origen, destino, distancia) VALUES (%s, %s, %s)",
                        (origen, destino, distancia))
@@ -146,6 +147,7 @@ class App(QWidget):
             self.label.setText("Entrada inválida. Asegúrate de ingresar origen, destino y distancia.")
 
     def ver_grafo(self, recorrido=None):
+        plt.rcParams['font.family'] = 'DejaVu Sans'
         G = nx.Graph()
         for municipio, conexiones in self.grafo.grafo.items():
             G.add_node(municipio)
